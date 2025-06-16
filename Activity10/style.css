@@ -1,0 +1,972 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/* Global Styles */
+*{
+    font-family: "Montserrat", sans-serif;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+/* Navigation Styles */
+nav{
+    background-color: #ffffffd4;
+    position: fixed;
+    width: 100%;
+    z-index: 1000; /* Ensure it's above everything else */
+    backdrop-filter: blur(2px); /* optional for glassy look */
+}
+/* Navigation Scroll Effect */
+nav.scrolled {
+  background-color: rgb(255, 255, 255); 
+  z-index: 1000;
+}
+/* Navigation Logo and Links */
+.logo{
+  display: inline-block;
+  position: relative;
+  right: 0;
+  top: 0;
+  margin-left: 15px;
+  margin-top: 10px;
+  margin-bottom: 6px;
+}
+.logo img{
+  display: inline-block;
+}
+.logo-text{
+  position: relative;
+  top: 0px;
+  display: inline-block;
+  margin-left: 5px;
+  height: 10px;
+}
+.logo-text p{
+  font-weight: bold;
+  color: rgb(62, 61, 61);
+}
+#diliman-text{
+  position: relative;
+  top: -15px;
+}
+
+.links{
+  display: inline-block;
+  position: relative;
+  top: 30px;
+  float: right;
+  right: 20px;
+}
+.nav-link {
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  margin: 0px 20px;
+  color: rgb(62, 61, 61);
+  position: relative;
+  padding-bottom: 3px; /* spacing for the underline */
+}
+
+/* Shared underline style */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 0;
+  background-color: rgb(62, 61, 61);
+  transition: width 0.3s ease-in-out;
+}
+
+/* On hover: show underline */
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Active link: underline stays */
+.nav-link.active::after {
+  width: 100%;
+  
+}
+.active{
+  color: black;
+}
+
+
+/* Navigation Accent Line */
+.red-nav-accent{
+  background-color: #901335;
+  width: 100%;
+  height: 5px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.heading{
+  font-size: 37px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.green{
+  color: #00573F;
+}
+
+.red{
+  color: #901335;
+}
+
+/* Home Page Styles */
+/* Global Styles for Overview Text */
+.description{
+  font-size: 16px;
+}
+
+.center{
+  text-align: center;
+}
+
+/* Global Button Styles */
+#show-all-btn{
+  display: block;
+  text-decoration: none;
+  outline: 1px solid #00573F;
+  color: #00573F;
+  font-weight: bold;
+  padding: 5px 50px;
+  font-size: 16px;
+  width: fit-content;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+
+}
+#show-all-btn:hover{
+  background-color: #00573F;
+  color: white;
+  
+}
+
+/* School Overview Section */
+.overview{
+  padding: 15px 20px;
+  display: grid;
+  grid-template-columns: 20% 20% 5% 40%;
+  justify-content: center;
+  align-items: center;
+}
+
+#outline-uplogo {
+  margin-top: 40px;
+  margin-left: 0px;
+  transform: rotate(-30deg);
+}
+
+.overview-question{
+  font-size: 40px;
+  text-align: right;
+  
+}
+/* Divider Line */
+.vertical-line {
+  margin-top: 20px;
+  width: 4px;
+  height: 200px;
+  background-color: black;
+  margin: auto;
+}
+
+/* News Section */
+.latest-news{
+  text-align: center;
+}
+
+.news{
+  display: grid;
+  grid-template-columns: repeat(3, 28%);
+  justify-content: space-around;
+}
+/* News Box Styles */
+.newsbox{
+  background-color: #eceaea;
+  height: 460px;
+  padding: 12px;
+}
+
+.news1 {
+  position: relative;
+  overflow: hidden;
+  height: 230px;
+}
+/* News 1 Image Styles and Hover Effect*/
+.news1::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* shorthand for top: 0; right: 0; bottom: 0; left: 0; */
+  background-image: url(images/news1-summit.png);
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.4s ease-in-out;
+  z-index: 0;
+}
+
+.news1:hover::before {
+  transform: scale(1.1); /* only the image scales */
+}
+.news-content p{
+  color: black;
+}
+.news-title{
+  font-size: 20px;
+  font-weight: 600;
+  margin: 10px 0px;
+}
+.news-date{
+  font-size: 15px;
+  font-weight: 550;
+  margin: 0;
+  font-style: italic;
+}
+/* News 2 Image Styles and Hover Effect*/
+.news2 {
+  position: relative;
+  overflow: hidden;
+  height: 230px;
+}
+
+.news2::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* shorthand for top: 0; right: 0; bottom: 0; left: 0; */
+  background-image: url(images/news2-internship.jpg);
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.4s ease-in-out;
+  z-index: 0;
+}
+
+.news2:hover::before {
+  transform: scale(1.1); /* only the image scales */
+}
+/* News 3 Image Styles and Hover Effect*/
+.news3 {
+  position: relative;
+  overflow: hidden;
+  height: 230px;
+}
+
+.news3::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* shorthand for top: 0; right: 0; bottom: 0; left: 0; */
+  background-image: url(images/news3-dance.png);
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.4s ease-in-out;
+  z-index: 0;
+}
+
+.news3:hover::before {
+  transform: scale(1.1); /* only the image scales */
+}
+
+/* Highlights Section */
+.highlights{
+  background-color: #901335;
+  padding: 30px 20px;
+}
+/* Resarch Styles */
+.research{
+  height: 400px;
+  background-color: #00573F;
+  display: grid;
+  grid-template-columns: repeat(2,45%);
+  justify-content: space-around;
+  padding: 40px;
+  margin-bottom: 20px;
+}
+
+.research div{
+  height: 100%;
+}
+
+.research-highlight{
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.research-heading{
+  font-size: 43px;
+  font-weight: bold;
+  margin: 0;
+  border-top: 3px solid #f5c518;
+  border-bottom: 3px solid #f5c518;
+  padding: 10px 0;
+}
+
+.research-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.research-content p{
+  color: white;
+}
+/* Learn More Button */
+.learn-more-btn{
+  text-decoration: none;
+  outline: 1px solid #FDBA25;
+  color: #FDBA25;
+  font-weight: bold;
+  padding: 10px;
+  font-size: 20px;
+  width: fit-content;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.learn-more-btn:hover{
+  background-color: #FDBA25;
+  color: #901335;
+  
+}
+
+.learn-more-btn.green:hover{
+  background-color: #FDBA25;
+  color: #00573F;
+  
+}
+/* Research Image Styles and Hover Effect */
+.research-image {
+  position: relative;
+  overflow: hidden;
+  height: 100%; 
+}
+
+.research-image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url(images/research.jpg);
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.4s ease-in-out;
+  z-index: 0;
+}
+
+.research-image:hover::before {
+  transform: scale(1.1);
+}
+/* Extension Section */
+.extension{
+  height: 400px;
+  background-color: #00573F;
+  display: grid;
+  grid-template-columns: repeat(2,45%);
+  justify-content: space-around;
+  padding: 40px;
+}
+/* Extension Image Styles and Hover Effects */
+.extension-image {
+  position: relative;
+  overflow: hidden;
+  height: 100%; 
+}
+
+.extension-image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url(images/extension.png);
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.4s ease-in-out;
+  z-index: 0;
+}
+
+.extension-image:hover::before {
+  transform: scale(1.1);
+}
+/* Events Section */
+.events{
+  display: grid;
+  grid-template-columns: repeat(3, 28%);
+  justify-content: space-around;
+
+}
+.eventbox{
+  background-color: #eceaea;
+  height: 330px;
+  padding: 12px;
+}
+
+.event-content p{
+  text-align: center;
+}
+.event-title{
+  font-size: 20px;
+  font-weight: 600;
+  margin: 10px 0px;
+}
+.event-date{
+  font-size: 15px;
+  font-weight: 550;
+  margin: 0;
+  font-style: italic;
+}
+/* Event 1 Image Styles and Hover Effects */
+.event1 {
+  position: relative;
+  overflow: hidden;
+  height: 230px;
+}
+
+.event1::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* shorthand for top: 0; right: 0; bottom: 0; left: 0; */
+  background-image: url(images/event1-pagsisiyasat.jpg);
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.4s ease-in-out;
+  z-index: 0;
+}
+
+.event1:hover::before {
+  transform: scale(1.1); /* only the image scales */
+}
+/* Event 2 Image Styles and Hover Effects */
+.event2 {
+  position: relative;
+  overflow: hidden;
+  height: 230px;
+}
+
+.event2::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* shorthand for top: 0; right: 0; bottom: 0; left: 0; */
+  background-image: url(images/event2-evolutionary.jpg);
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.4s ease-in-out;
+  z-index: 0;
+}
+
+.event2:hover::before {
+  transform: scale(1.1); /* only the image scales */
+}
+/* Event 3 Image Styles and Hover Effects */
+.event3 {
+  position: relative;
+  overflow: hidden;
+  height: 230px;
+}
+
+.event3::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* shorthand for top: 0; right: 0; bottom: 0; left: 0; */
+  background-image: url(images/event3-ai.jpg);
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.4s ease-in-out;
+  z-index: 0;
+}
+
+.event3:hover::before {
+  transform: scale(1.1); /* only the image scales */
+}
+
+/* Contact Section */
+.contact-section {
+  display: grid;
+  grid-template-columns: 50% 45%;
+  background-color: #3d3939;
+  color: white;
+  justify-content: space-between;
+  padding: 30px 0px;
+  height: 410px;
+}
+/* Contact Form */
+.contact-form p {
+  display: inline-block;
+  font-size: 37px;
+  font-weight: 600;
+  margin: 20px 0px;
+}
+.contact-form {
+  margin-top: -10px;
+  margin-left: 100px;
+}
+/* Contact Form Input and Textarea */
+.contact-form input,
+.contact-form textarea {
+  display: inline-block;
+  width: 90%;
+  margin-bottom: 20px;
+  padding: 15px;
+  border: none;
+  background-color: #d9d9d9;
+  border-bottom: 5px solid #2e2c2c;
+  
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-bottom: 5px solid #038b65;
+}
+
+.contact-form textarea {
+  height: 100px;
+  resize: none;
+}
+
+
+.contact-info {
+  background-color: #00573f;
+  padding: 30px;
+}
+
+.contact-note {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+/* Contact Info Blocks */
+.info-block h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  color: #FDBA25;
+}
+
+.info-block p {
+  margin-top: 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+/* Submit Button */
+.submit-btn {
+  background-color: transparent;
+  border: 1px solid #D9D9D9;
+  color: #D9D9D9;
+  font-weight: 600;
+  padding: 5px 50px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: fit-content;
+  text-decoration: none;
+}
+
+.submit-btn:hover {
+  background-color: #d9d9d9;
+  color: #3d3939;
+}
+
+.footer {
+  background-color: #901335;
+  color: white;
+  padding: 30px 50px;
+  font-family: Arial, sans-serif;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 20px;
+  position: relative;
+}
+/* Footer Styles */
+.footer-left {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.footer-logo {
+  width: 60px;
+  height: auto;
+}
+
+.footer-title {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.4;
+  margin-bottom: 10px;
+  margin-left: 0;
+}
+
+.footer-address{
+  margin-top: 20px;
+  margin-left: -80px;
+  
+}
+
+.footer-address p{
+  margin: 2px;
+  
+}
+
+.footer-links {
+  display: flex;
+  align-items: start;
+  gap: 50px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-divider {
+  grid-column: 1 / -1;
+  margin: 20px 0 10px;
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.footer-note {
+  grid-column: 2 / -1;
+  text-align: right;
+  font-size: 12px;
+  margin: 0;
+}
+
+/*ABOUT PAGE STYLES*/
+/* About Page Section */
+header.about {
+  background-image: url(images/upd-about-header.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 672px; /* adjust as needed */
+}
+/* About Page Overview Section */
+.about-overview{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-content: space-around;
+}
+/* About Page Image Grid */
+.image-grid {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  justify-items: center;
+  padding: 40px 20px;
+  gap: 0px;
+}
+
+.grid-image {
+  width: 270px;
+  height: 400px;
+  object-fit: cover;
+  margin-left: -100px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.grid-image-lower {
+  width: 270px;
+  height: 400px;
+  object-fit: cover;
+  position: relative;
+  bottom: -50px;
+  margin-right: -100px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.logo-image {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  z-index: 1;
+}
+/* About Page Overview Text Section */
+.text-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding-top: 80px;
+  padding-right: 50px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.image-container {
+  padding: 30px 20px;
+}
+/* About Page UP Seal Section */
+.up-seal{
+    background-color: #00573F;
+    padding: 20px;
+}
+.up-seal-div p{
+    color: white;
+    font-size: 18px;
+    line-height: 1.5;
+
+}
+.up-seal-div {
+  padding: 20px 30px;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    align-items: center;
+}
+.up-seal-div .img {
+  text-align: center;
+}
+.up-seal-heading{
+    margin-top: 15px;
+    margin-bottom: 0;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    color: white;
+    border-top: 3px solid #f5c518;
+    border-bottom: 3px solid #f5c518;
+    padding: 10px 0;
+}
+
+/* About Page Campuses Section */
+.campus-heading {
+  margin-top: -70px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.desc {
+  margin-top: -10px;
+
+}
+/* Campuses Cards Gallery */
+.gallery {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(2, 38%);
+  gap: 40px;
+  justify-content: center;
+}
+/* Campuses Card Styles */
+.card {
+  background-color: #eceaea;
+  padding: 10px;
+  text-align: center;
+}
+.card.last {
+  width: 38%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Campuses Card Image Styles and Hover Effects */
+.image-container {
+  position: relative;
+  overflow: hidden;
+  height: 300px;
+  width: 465px;
+  margin: 0 auto;
+}
+
+.image-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--image-url);
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.4s ease-in-out;
+  z-index: 0;
+}
+
+.image-container:hover::before {
+  transform: scale(1.1);
+}
+/* Campuses Card Text Styles */
+.card p {
+  margin-top: 10px;
+}
+
+.campus-name {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0px;
+    color: #00573F;
+}
+
+.campus-loc {
+    font-size: 15px;
+    font-weight: 550;
+    margin: 0;
+    font-style: italic;
+}
+/* About Page Mission and Vision Section */
+.about-missionvision{
+    background-color: #00573F;
+    padding: 40px 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.about-missionvision p{
+    color: white;
+}
+.mission-heading{
+    margin-top: 15px;
+    margin-bottom: 0;
+    font-size: 37px;
+    font-weight: 600;
+    text-align: center;
+    border-top: 3px solid #f5c518;
+    border-bottom: 3px solid #f5c518;
+    padding: 10px 0;
+}
+.about-missionvision div{
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+/* PROGRAMS PAGE*/
+/* Programs Page Header */
+header.programs {
+  background-image: url(images/program-heading.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 672px; /* adjust as needed */
+}
+/* Undergraduate Page Section */
+.undergraduate-programs .heading{
+    margin-bottom: 0;
+}
+.undergraduate-programs .description{
+    margin-top: 0;
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+.undergraduate-programs-boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 40%));
+  gap: 30px;
+  justify-content: center;
+}
+/* Undergraduate Program Box Styles */
+.program-box {
+  background-color: #901335;
+  color: white;
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  gap: 15px;
+  padding: 25px;
+  align-items: flex-start;
+}
+/* Undergraduate Program Box Letter Styles */
+.letter-instruction {
+  font-weight: bold;
+  font-size: 28px;
+  color: #FDBA25;
+  font-family: "Montserrat", sans-serif;
+  border-right: 2px solid white;
+  padding-right: 190px;
+  text-align: center;
+}
+/* Graduate Programs Page Section */
+.program-box-graduate {
+  background-color: #00573F;
+  color: white;
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  gap: 15px;
+  padding: 25px;
+  align-items: flex-start;
+}
+/* Graduate Program Box Letter Styles */
+.letter {
+  font-weight: bold;
+  font-size: 28px;
+  color: #FDBA25;
+  font-family: "Montserrat", sans-serif;
+  border-right: 2px solid white;
+  padding-right: 10px;
+  text-align: center;
+}
+/* Program List Styles */
+.program-list p {
+  margin: 5px 0;
+  text-align: left;
+  font-family: "Montserrat", sans-serif;
+}
+
+.instruction{
+  background-color: #00573F;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 15px;
+  margin-bottom: 30px;
+}
+.instruction p{
+  font-size: 16px;
+  color: white;
+
+}
+/* Initially Hidden Cards */
+.hidden {
+  display: none;
+}
+
+/* Show All Undergraduate Hidden Cards */
+#show-all-ungraduate-btn{
+  display: block;
+  text-decoration: none;
+  outline: 1px solid #00573F;
+  color: #00573F;
+  font-weight: bold;
+  padding: 5px 50px;
+  font-size: 16px;
+  width: fit-content;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+
+}
+#show-all-ungraduate-btn:hover{
+  background-color: #00573F;
+  color: white;
+}
+
+/* Show All Graduate Hidden Cards */
+#show-all-graduate-btn{
+  display: block;
+  text-decoration: none;
+  outline: 1px solid #00573F;
+  color: #00573F;
+  font-weight: bold;
+  padding: 5px 50px;
+  font-size: 16px;
+  width: fit-content;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+
+#show-all-graduate-btn:hover{
+  background-color: #00573F;
+  color: white;
+
+}
+
+
+
+
+

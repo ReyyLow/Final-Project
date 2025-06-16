@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEV REYJE</title>
+    <link rel="icon" type="image/png" href="../images/logo-favicon.png">
+    <link rel="stylesheet" href="../style.css">
+
+
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">
+            <img src="../images/logo-transparent.png" alt="" height="40px">
+            <p>DEV REYJE</p>
+
+        </div>
+
+        <div class="links">
+            <a href="../index.html">Home</a>
+            <a href="../index.html#projects">Projects</a>
+            <a href="../index.html#contact">Contact</a>
+
+        </div>
+
+        <!-- Dropdown Section -->
+        <div class="right-link">
+            <div class="link-container">
+                <div class="activity-link">
+                    <a class="activity-button" href="#activities" style="text-decoration: underline;">Activities</a>
+                </div>
+                <div class="activity-hover">
+                    <p class="dropdown">&#11206;</p>
+
+                    <div class="dropdown-menu">
+                    <div class="dropdown-column">
+                        <a href="../Activity1/activity1.html">Eye Of The Tiger</a>
+                        <a href="../Activity2/activity2.html">Resume Without List</a>
+                        <a href="../Activity3/activity3.html">Resume With List</a>
+                        <a href="../Activity4/activity4.html">Map Area</a>
+                        <a href="../Activity5/activity5.html">Table Colspan and Rowspan</a>
+                        <a href="../Activity6/activity6.html">Calendar Without Div</a>
+                        <a href="../Activity7/activity7.html">Calendar With Div</a>
+                        <a href="../Activity8/activity8.html">NU Quest</a>
+                        <a href="../Activity9/activity9.html">Navigation/Animation/ <br>Transition</a>
+                        <a href="../Activity10/index.html">Group Project</a>
+                    </div>
+                </div>
+                </div>
+            </div>
+            
+        </div>
+    </nav>
+
+    <!-- Activity Header -->
+    <header class="activity-header">
+        <div class="activity-header-content">
+            <div class="activity-header-text">
+                <h4 class="activity-header-label">Activity 8</h4>
+                <h1 class="activity-header-title">NU Quest</h1>
+                <em class="activity-header-date">May 19, 2025</em>
+                <div class="title-accent">
+                    <div class="green-accent"></div>
+                    <div class="white-accent"></div>
+                </div>
+                <p class="activity-header-desc">
+                    I designed a registration form, De La Marinas University Online Application Form. I sourced the necessary university data and requirements from the NU Quest. This project helped me practice form creation and aligning designs with institutional requirements.
+                </p>
+            </div>
+            <img src="../images/activity-circles.png" alt="" class="activity-header-circles-img">
+        </div>
+    </header>
+
+    <section class="gray-divider">
+
+    </section>
+
+    <!-- Activity Body Section -->
+    <section class="activity-body-section" id="body">
+        <div class="activity-body-header">
+                <img class="activity-cover" src="school-logo.png" alt="Eye of The Tiger Album Cover">
+                <h1 class="activity-title">De La Marinas University (DLMU)</h1>
+                <h3 class="activity-subtitle">Enrollment Registration Form</h3>
+        </div>
+
+        <!-- Registration Form -->
+        <div class="body-div">
+            <div class="main-div registration-card">
+                <p class="registration-title">Online Application</p>
+                <div class="reminder">
+                    <p id="head">Reminder</p>
+                    <p>
+                        Please provide your correct and complete information.<br>
+                        Fields marked with asterisk (<span>*</span>) are required.
+                    </p>
+                </div>
+                <form action="applied.html">
+                    <!-- Application Term & Course/Strand -->
+                    <div class="application">
+                        <p class="basicinfo-title">Application Term & Course/Strand</p>
+                        <hr>
+                        <label for="campus">Campus:<span>*</span></label>
+                        <select name="campus" id="campus" required>
+                            <option value="" disabled selected hidden>-- Select Campus --</option>
+                            <optgroup label="National Capital Region (NCR)">
+                                <option>DLMU Manila</option>
+                                <option>DLMU Fairview</option>
+                                <option>DLMU MOA</option>
+                                <option>DLMU Ortigas</option>
+                                <option>DLMU Las Pinas</option>
+                            </optgroup>
+                            <optgroup label="Region III (Central Luzon)">
+                                <option>DLMU Baliwag</option>
+                                <option>DLMU Clark</option>
+                            </optgroup>
+                            <optgroup label="Region IV-A (Calabarzon)">
+                                <option>DLMU Laguna</option>
+                                <option>DLMU Dasmarinas</option>
+                                <option>DLMU Lipa</option>
+                            </optgroup>
+                            <optgroup label="Region VI (Western Visayas)">
+                                <option>DLMU Bacolod</option>
+                            </optgroup>
+                            <optgroup label="Region VII (Central Visayas)">
+                                <option>DLMU Cebu</option>
+                            </optgroup>
+                        </select>
+
+                        <label for="acadyear">Academic Year:<span>*</span></label>
+                        <select name="acadyear" id="acadyear" required>
+                            <option value="" disabled selected hidden>-- Select Year --</option>
+                            <option>2025 - 2026</option>
+                            <option>2026 - 2027</option>
+                            <option>2027 - 2028</option>
+                        </select>
+
+                        <label for="term">Academic Term:<span>*</span></label>
+                        <select name="term" id="term" required>
+                            <option value="" disabled selected hidden>-- Select Term --</option>
+                            <option>1st</option>
+                            <option>2nd</option>
+                            <option>3rd</option>
+                        </select>
+
+                        <label for="apply">Applying For:<span>*</span></label>
+                        <select name="apply" id="apply-for" required>
+                            <option value="" disabled selected hidden>-- Select Level --</option>
+                            <optgroup label="Basic Education">
+                                <option>Grade 11</option>
+                                <option>Grade 12</option>
+                            </optgroup>
+                            <optgroup label="Higher Education">
+                                <option>Freshman</option>
+                                <option>Transferee</option>
+                                <option>Second Degree Taker</option>
+                                <option>Cross Enrolee</option>
+                            </optgroup>
+                        </select>
+
+                        <label for="program">Academic Program:<span>*</span></label>
+                        <select name="program" id="program" required>
+                            <option value="" disabled selected hidden>-- Select Program --</option>
+                            <optgroup label="Senior High School (SHS)">
+                                <option value="ABM">Accountancy, Business, and Management (ABM)</option>
+                                <option value="HUMSS">Humanities and Social Sciences (HUMSS)</option>
+                                <option value="STEM">Science, Technology, Engineering and Mathematics (STEM)</option>
+                            </optgroup>
+                            <optgroup label="School of Education, Arts, and Sciences (SEAS)">
+                                <option value="BAComm">BACHELOR OF ARTS IN COMMUNICATION (BAComm)</option>
+                                <option value="BAPolsci">BACHELOR OF ARTS IN POLITICAL SCIENCE (BAPolsci)</option>
+                                <option value="BSMT">BACHELOR OF SCIENCE IN MEDICAL TECHNOLOGY (BSMT)</option>
+                                <option value="BSPsy">BACHELOR OF SCIENCE IN PSYCHOLOGY (BSPsy)</option>
+                            </optgroup>
+                            <optgroup label="School of Accountancy, Business, and Management (SABM)">
+                                <option value="BSAccountancy">BACHELOR OF SCIENCE IN ACCOUNTANCY (BSAccountancy)</option>
+                                <option value="BSBA-MktgMgmt">BACHELOR OF SCIENCE IN BUSINESS ADMINISTRATION MAJOR IN MARKETING MANAGEMENT (BSBA-MktgMgmt)</option>
+                                <option value="BSMA">BACHELOR OF SCIENCE IN MANAGEMENT ACCOUNTING (BSMA)</option>
+                                <option value="BSTM">BACHELOR OF SCIENCE IN TOURISM MANAGEMENT (BSTM)</option>
+                            </optgroup>
+                            <optgroup label="School of Engineering, Architecture and Technology (SEAT)">
+                                <option value="BSArch">BACHELOR OF SCIENCE IN ARCHITECTURE (BSArch)</option>
+                                <option value="BSCE">BACHELOR OF SCIENCE IN CIVIL ENGINEERING (BSCE)</option>
+                                <option value="BSCpE">BACHELOR OF SCIENCE IN COMPUTER ENGINEERING (BSCpE)</option>
+                                <option value="BSIT">BACHELOR OF SCIENCE IN INFORMATION TECHNOLOGY WITH SPECIALIZATION IN MOBILE AND WEB APPLICATION (BSIT)</option>
+                            </optgroup>
+                            <optgroup label="Academic Office (ACAD)">
+                                <option value="DMD">DOCTOR OF DENTAL MEDICINE (DMD)</option>
+                            </optgroup>
+                        </select>
+                        <p class="note">Select entry level to view offered courses.</p>
+                    </div>
+
+                    <!-- Basic Information -->
+                    <div class="basicinfo">
+                        <p class="basicinfo-title">Basic Information</p>
+                        <hr>
+                        <p class="note">Note: Please write your names based on your PSA/NSO-copy of birth certificate. For married females who want to use their married name, write your names based on your marriage certificate.</p>
+                        
+                        <div class="form-row">
+                            <label for="firstName">First Name:<span>*</span></label>
+                            <input type="text" id="firstName" placeholder="Juan" required />
+                        </div>
+                        <div class="form-row">
+                            <label for="middleName">Middle Name:</label>
+                            <input type="text" id="middleName" placeholder="Leave it blank if not applicable" />
+                        </div>
+                        <div class="form-row">
+                            <label for="lastName">Last Name:<span>*</span></label>
+                            <input type="text" id="lastName" placeholder="Dela Cruz" required />
+                        </div>
+                        <div class="form-row">
+                            <label for="dob">Date of Birth:<span>*</span></label>
+                            <input type="date" id="dob" required />
+                        </div>
+                        <div class="form-row">
+                            <label for="email">Email Address:<span>*</span></label>
+                            <input type="email" id="email" required placeholder="juandelacruz@email.com"/>
+                        </div>
+                        <div class="form-row">
+                            <label for="mobile">Mobile No.:<span>*</span></label>
+                            <input type="tel" id="mobile" placeholder="(09) 12345-6789" required />
+                        </div>
+                        <div class="form-row">
+                            <label for="nationality">Nationality:<span>*</span></label>
+                            <select name="nationality" id="nationality" required>
+                                <option value="" disabled selected hidden>-- Select Nationality --</option>
+                                <option value="Filipino">Filipino</option>
+                                <option value="Afghan">Afghan</option>
+                                <option value="Aland Island">Aland Island</option>
+                                <option value="Albanian">Albanian</option>
+                                <option value="Algerian">Algerian</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Agreement -->
+                    <div class="agreement">
+                        <p class="agreement-title">Data Privacy Agreement</p>
+                        <input type="checkbox" id="agreement" required />
+                        <label for="agreement">
+                            By accomplishing this form, I hereby authorize De La Marinas University to retain, process, disseminate, and use for research purposes all the personal data that I provided. I understand and give consent to De La Marinas University to use these information to communicate with me either via post, telephone, mobile text, email or other way possible. In the event that I do not wish to be contacted further, I shall inform the University accordingly.
+                        </label>
+                    </div>
+                    <!-- Submit Button -->
+                    <div class="button-group">
+                        <button type="submit" class="create">Create Account</button>
+                        <button type="reset" class="cancel">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+    </section>
+
+    <!-- Pagination Section -->
+    <section class="activity-pagination-section">
+            <div class="activity-pagination">
+                <button class="pagination-btn prev">&lt;</button>
+                <a href="../Activity1/activity1.html" class="pagination-btn">1</a>
+            <a href="../Activity2/activity2.html" class="pagination-btn">2</a>
+            <a href="../Activity3/activity3.html" class="pagination-btn">3</a>
+            <a href="../Activity4/activity4.html" class="pagination-btn">4</a>
+            <a href="../Activity5/activity5.html" class="pagination-btn">5</a>
+            <a href="../Activity6/activity6.html" class="pagination-btn">6</a>
+            <a href="../Activity7/activity7.html" class="pagination-btn">7</a>
+            <a href="../Activity8/activity8.html" class="pagination-btn active">8</a>
+            <a href="../Activity9/activity9.html" class="pagination-btn">9</a>
+            <a href="../Activity10/activity10.html" class="pagination-btn">10</a>
+            <button class="pagination-btn next">&gt;</button>
+        </div>        
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <div class="footer-logo-row">
+                    <img src="../images/logo-favicon.png" alt="DEV REYJE Logo" class="footer-logo">
+                    <span class="footer-brand">DEV REYJE</span>
+                </div>
+                <div class="title-accent">
+                    <div class="green-accent"></div>
+                    <div class="white-accent"></div>
+                </div>
+                <div class="footer-contact">
+                    <div><span>Phone:</span> <span>+639863334534</span></div>
+                    <div><span>Email:</span> <span>marinasreyje@gmail.com</span></div>
+                    <div><span>Address:</span> <span>Pampanga, Philippines</span></div>
+                </div>
+            </div>
+            <div class="footer-right">
+                <a href="../index.html">Home</a>
+                <a href="../index.html#projects">Projects</a>
+                <a href="../index.html#contact">Contact</a>
+                <a href="../index.html#activities">Activities</a>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-bottom">
+            @2025 All Rights Reserved
+        </div>
+    </footer>
+
+    
+    <script src="../script.js"></script>
+</body>
+</html>
